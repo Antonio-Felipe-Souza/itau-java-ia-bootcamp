@@ -1,8 +1,8 @@
-package topico3;
+package topico3.exercicio1;
 
 public class Conta {
     private Double saldo = 0.0;
-    private Double chequeEspecial = 0.0; // limite fixo, definido na criação
+    private Double chequeEspecial = 0.0;
     private String nome;
 
     public void criarConta(String nome, Double primeiroDeposito) {
@@ -19,7 +19,6 @@ public class Conta {
             return;
         }
 
-        // se estava usando cheque especial, cobra 20% do valor usado
         if (saldo < 0) {
             Double taxa = getChequeUsado() * 0.20;
             saldo -= taxa;
@@ -50,7 +49,6 @@ public class Conta {
     }
 
     public boolean pagarBoleto(Double valor) {
-        // boleto funciona como um saque: mesmas regras de saldo + cheque especial
         return sacar(valor);
     }
 
@@ -70,7 +68,6 @@ public class Conta {
         return chequeEspecial - getChequeUsado();
     }
 
-    // saldo + cheque especial = quanto ainda pode ser gasto
     public Double getLimite() {
         return saldo + chequeEspecial;
     }
