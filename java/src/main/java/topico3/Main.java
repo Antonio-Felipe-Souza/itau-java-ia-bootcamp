@@ -1,8 +1,8 @@
-package topico3.exercicio1;
+package topico3;
 
 import java.util.Scanner;
 
-public class Exercicio1 {
+public class Main {
     public static void main(String[] args) {
         var conta = new Conta();
         var scanner = new Scanner(System.in);
